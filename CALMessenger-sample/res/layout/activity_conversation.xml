@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/conversation_detail_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8.0dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/reply_group_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="6"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="false"
+            android:gravity="bottom"
+            android:inputType="textMultiLine"
+            android:isScrollContainer="true"
+            android:maxLength="200"
+            android:maxLines="8"
+            android:minHeight="50dp" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#434F5B"
+            android:focusable="true"
+            android:onClick="sendMessage"
+            android:text="Send"
+            android:textColor="#F2F2F2" />
+    </LinearLayout>
+
+</LinearLayout>
